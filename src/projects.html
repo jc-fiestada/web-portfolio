@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — JC Fiestada</title>
+  <meta name="description" content="Projects by JC — deployed apps and open source repositories." />
+
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/pages/projects.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Home">
+        <div class="header__logo-mark"><span>JC</span></div>
+        <span class="header__logo-name"><span>JC</span> Fiestada</span>
+      </a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="index.html"    class="header__nav-link">Home</a>
+        <a href="projects.html" class="header__nav-link" aria-current="page">Projects</a>
+        <a href="about.html"    class="header__nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="projects-hero" aria-labelledby="projects-heading">
+      <div class="projects-hero__inner">
+        <span class="section-label">Projects</span>
+        <h1 class="projects-hero__heading" id="projects-heading">
+          Things I've <span>Built.</span>
+        </h1>
+        <p class="projects-hero__sub">
+          A mix of deployed &amp; live web apps and personal repositories.
+        </p>
+      </div>
+    </section>
+
+    <div class="projects-body">
+      <div class="projects-body__inner">
+
+        <section class="project-section project-section--deployed" aria-labelledby="deployed-heading">
+          <div class="project-section__header">
+            <span class="section-label">Live</span>
+            <h2 class="project-section__title" id="deployed-heading">Deployed</h2>
+            <div class="project-section__rule" aria-hidden="true"></div>
+            <span class="project-section__count">Publicly accessible</span>
+          </div>
+
+          <div class="project-grid">
+
+            <article class="project-card project-card--deployed">
+              <div class="project-card__header">
+                <h3 class="project-card__title">InstaId</h3>
+                <span class="project-card__status project-card__status--deployed">Live</span>
+              </div>
+
+              <p class="project-card__desc">
+                An open access ID generation tool. Users fill out a student
+                or employee form, pick a card template, and receive a print-ready PDF which then can be
+                directly downloaded.
+              </p>
+
+              <div class="project-card__stack" aria-label="Tech stack">
+                <span class="tech-tag">C# ASP.NET Core Minimal API</span>
+                <span class="tech-tag">TypeScript (Parcel, npm)</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Render</span>
+              </div>
+
+              <div class="project-card__footer">
+                <span class="project-card__date">2026</span>
+                <div class="project-card__links">
+                  <a
+                    href="https://instaid.onrender.com/main.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link project-card__link--demo"
+                    aria-label="Visit InstaId live demo"
+                  >InstaId Link ↗</a>
+                  <a
+                    href="https://github.com/jc-fiestada/insta-id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link"
+                    aria-label="View InstaId source on GitHub"
+                  >Source Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="project-section" aria-labelledby="repo-heading">
+          <div class="project-section__header">
+            <span class="section-label">Localhost Only</span>
+            <h2 class="project-section__title" id="repo-heading">Repository</h2>
+            <div class="project-section__rule" aria-hidden="true"></div>
+            <span class="project-section__count">GitHub only</span>
+          </div>
+
+          <div class="project-grid">
+
+            <article class="project-card">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Employee Attendance Web App</h3>
+                <span class="project-card__status project-card__status--repo">Repo</span>
+              </div>
+
+              <p class="project-card__desc">
+                A web app for managing employee attendance using QR codes. Admins can add and manage employees, 
+                generate ID cards with QR codes, and track attendance through scanning. 
+                Employees can scan their IDs which logs their attendance automatically. 
+                The system also sends generated IDs via email and restricts access to admin-only features.
+              </p>
+
+              <div class="project-card__stack" aria-label="Tech stack">
+                <span class="tech-tag">C# ASP.NET Core Minimal API</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">TypeScript (Parcel, npm)</span>
+                <span class="tech-tag">JWT Auth</span>
+                <span class="tech-tag">Qr Scanner Integration</span>
+              </div>
+
+              <div class="project-card__footer">
+                <span class="project-card__date">2026</span>
+                <div class="project-card__links">
+                  <a
+                    href="https://drive.google.com/file/d/1I7LEbe42tfiNpqPwGrZwC1mPIvzIHrjP/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link project-card__link--demo"
+                    aria-label="Visit InstaId live demo"
+                  >Demo (Video) ↗</a>
+                  <a
+                    href="https://github.com/jc-fiestada/employee-attendance-webapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link"
+                    aria-label="View Employee Attendance System on GitHub"
+                  >Source Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Pokemon ML (Machine Learning) Eval Web App</h3>
+                <span class="project-card__status project-card__status--repo">Repo</span>
+              </div>
+
+              <p class="project-card__desc">
+                A web app with a C# backend that consumes a Python machine learning API. 
+                It processes Pokémon data and applies KNN, Logistic Regression, and Decision Tree models. 
+                Model configuration for improved results was not implemented due to school and time constraints, 
+                which affects prediction accuracy, but the project demonstrates full integration of machine 
+                learning into a web system.
+              </p>
+
+              <div class="project-card__stack" aria-label="Tech stack">
+                <span class="tech-tag">C# ASP.NET Core Minimal API</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Python (FastApi)</span>
+                <span class="tech-tag">Machine Learning</span>
+              </div>
+
+              <div class="project-card__footer">
+                <span class="project-card__date">2026</span>
+                <div class="project-card__links">
+                  <a
+                    href="https://drive.google.com/file/d/1UAJ1pneT1yn4oMpSB7b1TntHcOrddEK4/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link project-card__link--demo"
+                    aria-label="Visit InstaId live demo"
+                  >Demo (Video) ↗</a>
+                  <a
+                    href="https://github.com/jc-fiestada/pokemon-ml-eval-webapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link"
+                    aria-label="View Employee Attendance System on GitHub"
+                  >Source Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__header">
+                <h3 class="project-card__title">Hyper Bean</h3>
+                <span class="project-card__status project-card__status--repo">Repo</span>
+              </div>
+
+              <p class="project-card__desc">
+                A coffee shop ordering web app with separate admin and user roles. Users can create an account, 
+                order coffee, add funds, and view their transaction history. Admins can manage users, control menu 
+                items and add-ons, and update item availability. The system uses a C# backend with SQLite and a simple 
+                frontend built with Vanilla JavaScript. This project serves as my first complete CRUD-based web 
+                application on a localhost.
+              </p>
+
+              <div class="project-card__stack" aria-label="Tech stack">
+                <span class="tech-tag">C# ASP.NET Core Minimal API</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Vanilla JavaScript</span>
+                <span class="tech-tag">CRUD</span>
+              </div>
+
+              <div class="project-card__footer">
+                <span class="project-card__date">2025</span>
+                <div class="project-card__links">
+                  <a
+                    href="https://drive.google.com/file/d/1DbCW4mHwI0Ib0K4UwQXlylouIDhbdVx7/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link project-card__link--demo"
+                    aria-label="Visit InstaId live demo"
+                  >Demo (Video) ↗</a>
+                  <a
+                    href="https://github.com/jc-fiestada/hyper-bean"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-card__link"
+                    aria-label="View Employee Attendance System on GitHub"
+                  >Source Code ↗</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <span class="footer__brand"><span>JC</span> Fiestada</span>
+      </div>
+      <div class="footer__right">
+        <span class="footer__tag">Open for internship Opportunities</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --clr-bg:           #130d07;   
+  --clr-bg-2:         #1c1209;   
+  --clr-bg-3:         #24180b;   
+  --clr-surface:      #2e1e0e;   
+  --clr-surface-2:    #3a2512;   
+  --clr-border:       #4d3018;   
+  --clr-border-light: #6b4424;   
+
+  --clr-accent:       #c8873a;   
+  --clr-accent-dim:   #9a6425;   
+  --clr-accent-glow:  rgba(200, 135, 58, 0.10);
+  --clr-accent-light: #e8a85c;   
+
+  --clr-text:         #f0e6d3;   
+  --clr-text-muted:   #9a7d60;   
+  --clr-text-faint:   #5c3e24;   
+
+  --clr-white:        #ffffff;
+  --clr-black:        #000000;
+
+  --clr-success:      #7aab6e;
+  --clr-error:        #c95b5b;
+  --clr-warning:      --clr-accent;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'DM Mono', 'Courier New', monospace;
+
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.375rem;
+  --fs-xl:   1.75rem;
+  --fs-2xl:  2.25rem;
+  --fs-3xl:  3rem;
+  --fs-4xl:  4.5rem;
+  --fs-5xl:  6rem;
+
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+
+  --border-width:       2px;
+  --border-width-thick: 3px;
+  --border:             var(--border-width) solid var(--clr-border);
+  --border-accent:      var(--border-width-thick) solid var(--clr-accent);
+
+  --shadow-brutal:      4px 4px 0px var(--clr-accent);
+  --shadow-brutal-sm:   2px 2px 0px var(--clr-accent);
+  --shadow-brutal-dark: 4px 4px 0px var(--clr-black);
+  --shadow-brutal-lg:   6px 6px 0px var(--clr-accent);
+  --shadow-brutal-dim:  4px 4px 0px var(--clr-accent-dim);
+
+  --container-max: 1140px;
+  --header-height: 64px;
+
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  --z-header: 50;
+  --z-modal:  100;
+  --z-toast:  200;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol { list-style: none; }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.1;
+  color: var(--clr-text);
+}
+
+p {
+  line-height: 1.75;
+  color: var(--clr-text-muted);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-6);
+}
+
+.text-accent   { color: var(--clr-accent); }
+.text-muted    { color: var(--clr-text-muted); }
+.text-mono     { font-family: var(--font-mono); }
+.text-display  { font-family: var(--font-display); }
+.text-upper    { text-transform: uppercase; letter-spacing: 0.1em; }
+.text-center   { text-align: center; }
+.text-sm       { font-size: var(--fs-sm); }
+.text-xs       { font-size: var(--fs-xs); }
+
+.flex          { display: flex; }
+.flex-col      { display: flex; flex-direction: column; }
+.items-center  { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-4         { gap: var(--sp-4); }
+.gap-6         { gap: var(--sp-6); }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--clr-accent);
+}
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--clr-accent);
+  flex-shrink: 0;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
